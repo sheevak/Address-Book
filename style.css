@@ -35,7 +35,7 @@ h1 {
   background-color: #dae4e4;
 }
 
-/* ----------- Contact PAGE Styles -------------- */
+/* ----------- Contact Page Styles -------------- */
 
 .list-page {
   display: block;
@@ -108,7 +108,7 @@ h1 {
 
 
 
-/* ----------- FORM PAGE STYLES ------------------ */
+/* ----------- Form Page STYLES ------------------ */
 
 .add-page {
   display: none;
@@ -157,4 +157,13 @@ input {
 
 h5 {
   color: #56bad9;
+}
+
+.error-alert {
+  color: red;
+}
+
+.error {
+  border-color: red;
+  border-style: solid;
 }
