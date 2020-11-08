@@ -9,23 +9,23 @@
 	</head>
 
 	<body>
-		<div id="container">
 
 			<div class="navigation">
 
 				<h1>Address Book</h1>
-				<button class="tab" id="Contacts" onclick="view('.AddPage', '.ListPage', '#Contacts', '#addContact')">Contacts</button>
-				<button class="tab" id="addContact" onclick="view('.ListPage', '.AddPage', '#addContact', '#Contacts')">Add Contacts</button>
+				<button class="tab" id="contacts" onclick="view('.add-page', '.list-page', '#contacts', '#add-contact')">Contacts</button>
+				<button class="tab" id="add-contact" onclick="view('.list-page', '.add-page', '#add-contact', '#contacts')">Add Contacts</button>
 
 			</div>
 
 
-			<div class="ListPage">
+			<div class="list-page">
 
 				<form action="form.html" method="post">
-					<input type="text" class="search" placeholder="">
-					<button type="button" class="search_button" onclick="search(this.form)">Search</button>
-				<form>
+					<input type="text" id="searchbox" class="search" placeholder="">
+					<button type="button" class="search-button" onclick="search(this.form)">Search</button>
+					<button class="fas fa-times" type="button" onclick="exitsearch(this.form)"></button>
+				</form>
 
 				<div class="grid">
 
@@ -34,7 +34,7 @@
 			</div>
 
 
-			<div class="AddPage">
+			<div class="add-page">
 
 				<form action="" method="GET">
 
@@ -66,8 +66,6 @@
 		    </form>
 
 			</div>
-
-		</div>
 
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -4,10 +4,6 @@ body {
   background-color: #ffffff;
 }
 
-#container {
-
-}
-
 /* --------- NAVIGATION STYLES -------------- */
 .navigation {
   display: flex;
@@ -35,17 +31,13 @@ h1 {
   outline: none;
 }
 
-#Contacts {
-
-}
-
-#addContact {
+#add-contact {
   background-color: #dae4e4;
 }
 
 /* ----------- Contact PAGE Styles -------------- */
 
-.ListPage {
+.list-page {
   display: block;
   margin: 10px auto 10px auto;
   padding: 10px;
@@ -57,7 +49,7 @@ h1 {
   display: inline-block;
 
 }
-.search_button {
+.search-button {
   height: 30px;
   background-color: #56bad9;
   color: white;
@@ -66,13 +58,22 @@ h1 {
   font-size: 1.1em;
 }
 
+.fa-times {
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  background-color: white;
+  color: #56bad9;
+
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.acontact {
+.contact {
   width: 28%;
   height: 130px;
   background-color: #eaf2f2;
@@ -91,7 +92,7 @@ h1 {
 .fa-trash {
   width: 30px;
   height: 30px;
-    position: absolute;
+  position: absolute;
   bottom: 20px;
   right: 20px;
   border-style: none;
@@ -100,12 +101,16 @@ h1 {
   color: white;
 }
 
+.hide {
+  display: none;
+}
+
 
 
 
 /* ----------- FORM PAGE STYLES ------------------ */
 
-.AddPage {
+.add-page {
   display: none;
   width: 50%;
   max-width: 500px;

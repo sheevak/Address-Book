@@ -1,9 +1,8 @@
 function AddingContact (form) {
-  counter += 1;
-
   //Creating a new object of the new contact's details
-  const newc = {
-    fullname: `${form.name.value}${form.surname.value}`,
+  let contactName = `${form.name.value}${form.surname.value}`.toUpperCase();
+
+  const newContact = {
     name: form.name.value,
     surname: form.surname.value,
     phone: form.phone.value,
@@ -13,26 +12,25 @@ function AddingContact (form) {
   };
 
   //Creating a new div to display the new contact's details
-  const newdiv = $("<div>");
-  newdiv.attr('id', `${newc.fullname}`).addClass("acontact");
-  $(".grid").append(newdiv);
+  const newDiv = $("<div>");
+  newDiv.attr('id', `${contactName}`).addClass("contact");
+  $(".grid").append(newDiv);
 
   //Creating new elements to display the new contact's details
-  let fullname = $("<p>");
-  fullname.text(`${newc.name} ${newc.surname}`).addClass("full");
+  let fullName = $("<p>");
+  fullName.text(`${newContact.name} ${newContact.surname}`).addClass("full");
   let details = $("<p>");
-  details.html(`<strong>Address:</strong><br>${newc.address}<br>${newc.city}, ${newc.postcode}<br><strong>Phone Number:</strong><br>${newc.phone}`);
-  $(`#${newc.fullname}`).append(fullname);
-  $(`#${newc.fullname}`).append(details);
+  details.html(`<strong>Address:</strong><br>${newContact.address}<br>${newContact.city}, ${newContact.postcode}<br><strong>Phone Number:</strong><br>${newContact.phone}`);
+  $(`#${contactName}`).append(fullName);
+  $(`#${contactName}`).append(details);
 
-  let del = $("<button>");
-  del.addClass("fas").addClass("fa-trash").attr("type", "button").attr("onClick", `deleteContact("#${newc.fullname}")`);  //.attr("value", `${newc.fullname}`)
-  $(`#${newc.fullname}`).append(del);
+  //Creating a button element for deleting the contact
+  let deleteButton = $("<button>");
+  deleteButton.addClass("fas").addClass("fa-trash").attr("type", "button").attr("onClick", `deleteContact("#${contactName}")`);
 
   //Alerting the user that the contact had been added
   let alert = $("<h5>");
-  alert.text(`${newc.name} ${newc.surname} has been added to your contacts.`);
-  alert.addClass("alert");
+  alert.text(`${newContact.name} ${newContact.surname} has been added to your contacts.`).addClass("alert");
   $("#submit").after(alert);
 
   //Clearing the input fields
@@ -51,9 +49,22 @@ function view(hide, show, front, back) {
   $(back).css("background-color", "#dae4e4");
 };
 
-function deleteContact(delbutton){
-  $(delbutton).css("display", "none");
+function deleteContact(contactId){
+  $(contactId).css("display", "none");
 }
 
+function search(form){
+  let phrase = form.searchbox.value.toUpperCase();
 
-let counter = 0;
+    $(".contact").each(function() {
+      if ( !$(this).attr("id").includes(phrase) ) {
+        $(this).addClass("hide")};
+    });
+}
+
+function exitsearch(form){
+  $(".contact").each(function() {
+      $(this).removeClass("hide");
+      form.searchbox.value = ("");
+  });
+}
