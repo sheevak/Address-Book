@@ -1,0 +1,155 @@
+body {
+  font-family: "Fira Sans", serif;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+#container {
+
+}
+
+/* --------- NAVIGATION STYLES -------------- */
+.navigation {
+  display: flex;
+  align-items: baseline;
+  background-color: #eaf2f2;
+}
+
+h1 {
+  flex-grow: 1;
+  margin: 20px 20px;
+  margin-bottom: 0px;
+  color: #56bad9;
+}
+
+.tab {
+  margin-right: 20px;
+  margin-bottom: 0px;
+  padding: 20px;
+  border-radius: 8px 8px 0px 0px;
+  border-style: none;
+  background-color: white;
+  color: #56bad9;
+  font-weight: bold;
+  font-size: 1.2em;
+  outline: none;
+}
+
+#Contacts {
+
+}
+
+#addContact {
+  background-color: #dae4e4;
+}
+
+/* ----------- Contact PAGE Styles -------------- */
+
+.ListPage {
+  display: block;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  background-color: white;
+}
+
+.search {
+  width: 200px;
+  display: inline-block;
+
+}
+.search_button {
+  height: 30px;
+  background-color: #56bad9;
+  color: white;
+  display: inline-block;
+  border-style: none;
+  font-size: 1.1em;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.acontact {
+  width: 28%;
+  height: 130px;
+  background-color: #eaf2f2;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.full {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: auto;
+}
+
+.fa-trash {
+  width: 30px;
+  height: 30px;
+    position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #56bad9;
+  color: white;
+}
+
+
+
+
+/* ----------- FORM PAGE STYLES ------------------ */
+
+.AddPage {
+  display: none;
+  width: 50%;
+  max-width: 500px;
+  margin: 10px auto;
+  background-color: white;
+}
+
+.icon {
+  background-color: #56bad9;
+  color: white;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+legend {
+  font-size: 1.3em;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input {
+  width: 100%;
+  background-color: #dae4e4;
+  border: none;
+  height: 30px;
+}
+
+#submit {
+  height: 40px;
+  background-color: #56bad9;
+  color: white;
+  margin: 10px auto;
+  display: block;
+  border-style: none;
+  font-size: 1.1em;
+}
+
+h5 {
+  color: #56bad9;
+}
