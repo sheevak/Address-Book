@@ -3,15 +3,11 @@ function AddingContact (form) {
   let counter = 0;
   //Highlighting fields which have been left blank
   $('.add').each(function(){
-    console.log($(this));
-    console.log($(this).val());
     if($(this).val() == "" ){
       $(this).addClass("error");
-      //console.log($(this).val());
       counter += 1;
     } else {
       $(this).removeClass("error");
-      //console.log($(this).val());
     }
   });
 
