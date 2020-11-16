@@ -11,7 +11,6 @@ function AddingContact (form) {
     }
   });
 
-  console.log(counter);
   /*Testing if any fields have been left blank. If they have been the contact is not added
     to the address book and an error message is returned.
   */
